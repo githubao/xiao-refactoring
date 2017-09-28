@@ -28,19 +28,25 @@
 1. SelfEncapsulate Field(get和set包装字段的访问)
 2. Replace Value with Object(明确类的职责，哪些功能需要一个新类来实现)
 3. Change Value to Reference(限定类的创建方式，什么情况下是相同的对象。Date类是可变的)
-3. Change Reference to Value(保证类是不可变的，是pojo。String类是不可变的)
-4. Replace Array with Object(数据里面的对象，表示的不是相同语义的东西的时候)
-5. Change Unidirectional Association to Bidirectional
-6. Change Bidirectional Association to Unidirectional
-7. Replace Number with Symbolic Constant
-8. Duplicate Observed Data
-9. Encapsulate Data
-10. Encapsulate Collection
-11. Replace Record with Class
-12. Replace Type Code with Subclass
-13. Replace Type Code with State/Strategy
+4. Change Reference to Value(保证类是不可变的，是pojo。String类是不可变的)
+5. Replace Array with Object(数据里面的对象，表示的不是相同语义的东西的时候)
+6. Duplicate Observed Data(分离逻辑，复制数据字段到控制层，view只负责展示，controller层设置数据)
+7. Change Unidirectional Association to Bidirectional(互相持有引用)
+8. Change Bidirectional Association to Unidirectional(不要循环引用)
+9. Replace Number with Symbolic Constant(使用常量类)
+10. Encapsulate Data(使用get和set访问字段值)
+11. Encapsulate Collection(get返回不可变的对象，提供add和remove单个元素的方法)
+12. Replace Record with Class(对于外部的数据记录，使用一个新的数据类来表示)
+13. Replace Type Code with Class(使用枚举替代类型码)
+14. Replace Type Code with Subclass(使用继承和多态替代类型码)
+15. Replace Type Code with State/Strategy
+16. Replace Subclass with Field
 
+###### 简化条件
+1. pass
 
+###### 简化函数
+1. pass
 
 #### 重构原则
 
