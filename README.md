@@ -3,7 +3,7 @@
 
 #### 重构列表
 
-###### 函数
+##### 函数
 1. Extract Method(抽取完成固定功能的一段代码为方法)
 2. Inline Method(一行的调用，就没必要作为方法)
 3. Inline Temp(没有必要的临时变量就去掉)
@@ -14,7 +14,7 @@
 8. Replace Method with Method Object(如果方法的参数太多，新建一个对象)
 9. Substitute Algorithm(替换旧的算法)
 
-###### 对象
+##### 对象
 1. Move Method(方法应该属于哪个类)
 2. Move Field(字段应该属于哪个类)
 3. Extract Class(如果一个类太臃肿，那么考虑分散职责)
@@ -24,7 +24,7 @@
 7. Introduce Foreign Method(外部添加方法完善api)
 8. Introduce Local Extension(外部继承类完善api)
 
-###### 组织数据
+##### 组织数据
 1. SelfEncapsulate Field(get和set包装字段的访问)
 2. Replace Value with Object(明确类的职责，哪些功能需要一个新类来实现)
 3. Change Value to Reference(限定类的创建方式，什么情况下是相同的对象。Date类是可变的)
@@ -42,7 +42,7 @@
 15. Replace Type Code with State/Strategy(使用策略或者状态模式替代类型码)
 16. Replace Subclass with Field(如果子类只是常量数据的不同，那么删除它)
 
-###### 简化条件
+##### 简化条件
 1. Decompose Conditional(条件判断抽取为独立的函数)
 2. Consolidate Conditional Expression(相同的条件分支判断条件逻辑结果相同，则合并)
 3. Consolidate Duplicate Conditional Fragments(不要在条件体里面写共同的代码)
@@ -52,7 +52,7 @@
 7. Introduce Null Object(不要返回空对象，返回空内容的实体对象)
 8. Introduce Assertion(使用断言来表示代码执行的先决条件)
 
-###### 简化函数
+##### 简化函数
 1. Rename Method(函数的名字应该表达它的作用和含义)
 2. Add Parameter(为函数添加必要的参数)
 3. Remove Parameter(移除函数不必要的参数)
@@ -67,7 +67,10 @@
 12. Replace Constructor with Factory Method(使用工厂方法)
 12. Encapsulate Downcast(如果必须要强制类型转化，那么最好封装成函数)
 13. Replace Error Code with Exception(用异常代替错误码)
+13. Replace Exception with Test(不要用异常处理正常的情况)
 
+###### 处理概括关系
+1. 
 
 #### 重构原则
 
