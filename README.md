@@ -21,8 +21,8 @@
 4. Inline Class(该类只是public类的附属类)
 5. Hide Delegate(没必要向客户端暴露类的内部调用细节)
 6. Remove Middle Man(去除没必要的委托，明确是否是真的委托的关系)
-7. Introduce Foreign Method
-8. Introduce Local Extension
+7. Introduce Foreign Method(外部添加方法完善api)
+8. Introduce Local Extension(外部继承类完善api)
 
 ###### 组织数据
 1. SelfEncapsulate Field(get和set包装字段的访问)
@@ -39,14 +39,35 @@
 12. Replace Record with Class(对于外部的数据记录，使用一个新的数据类来表示)
 13. Replace Type Code with Class(使用枚举替代类型码)
 14. Replace Type Code with Subclass(使用继承和多态替代类型码)
-15. Replace Type Code with State/Strategy
-16. Replace Subclass with Field
+15. Replace Type Code with State/Strategy(使用策略或者状态模式替代类型码)
+16. Replace Subclass with Field(如果子类只是常量数据的不同，那么删除它)
 
 ###### 简化条件
-1. pass
+1. Decompose Conditional(条件判断抽取为独立的函数)
+2. Consolidate Conditional Expression(相同的条件分支判断条件逻辑结果相同，则合并)
+3. Consolidate Duplicate Conditional Fragments(不要在条件体里面写共同的代码)
+4. Remove Control Flag(在循环中最好不要使用布尔变量进行条件控制，而是使用break/continue)
+5. Replace Nested Conditional with Guard Clauses(使用return替代复杂嵌套的条件判断)
+6. Replace Conditional with Polymorphism(使用多态替换switch语句)
+7. Introduce Null Object(不要返回空对象，返回空内容的实体对象)
+8. Introduce Assertion(使用断言来表示代码执行的先决条件)
 
 ###### 简化函数
-1. pass
+1. Rename Method(函数的名字应该表达它的作用和含义)
+2. Add Parameter(为函数添加必要的参数)
+3. Remove Parameter(移除函数不必要的参数)
+4. Separate Query from Modifier(不要既查询状态，又修改状态。任何有返回值的函数都不应该有副作用(修改值))
+5. Parameterize Method(向函数传递参数而不是新建冗余的方法)
+6. Replace Parameter with Explicit Methods(用确定的方法替代传参调用)
+7. Preserve Whole Object(传递整个对象使得内部可以使用各种信息)
+8. Replace Parameter with Methods(如果函数参数是通过调用另外一个函数获得的，那么它没必要存在)
+9. Introduce Parameter Object(传递函数很多的时候，使用对象传参)
+10. Remove Setting Method(为保证对象不被修改，移除设值函数)
+11. Hide Method(外部使用不到的函数，改成私有调用)
+12. Replace Constructor with Factory Method(使用工厂方法)
+12. Encapsulate Downcast(如果必须要强制类型转化，那么最好封装成函数)
+13. Replace Error Code with Exception(用异常代替错误码)
+
 
 #### 重构原则
 
