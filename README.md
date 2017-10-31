@@ -70,7 +70,24 @@
 13. Replace Exception with Test(不要用异常处理正常的情况)
 
 ###### 处理概括关系
-1. 
+1. Pull Up Field(把通用字段移动到超类)
+2. Pull Up Method(把通用方法移动到超类)
+3. Pull Up Construct Body(把通用初始化移动到超类)
+4. Pull Down Method(把非公共方法移动到子类)
+5. Pull Down Filed(把非公共字段移动到子类)
+6. Extract Subclass(把非通用的功能抽取到子类具体实现)
+7. Extract Superclass(把相同的功能抽取到父类)
+8. Extract Interface(把一种通用的能力定义成一种抽象)
+9. Collapse Hierarchy(如果父类和子类功能基本一致没有本质区别，那么合并它们)
+10. Form Template Method(构造模板方法)
+11. Replace Inheritance with Delegation(使用委托替代继承)
+12. Replace Delegation with Delegation(存在多个一模一样的相同实现的时候)
+
+###### 大型重构
+1. Tease Apart Inheritance(梳理混乱的继承体系，一个类应该只有一个职责，其他的使用委托实现)
+2. Convert Procedural Design to Objects(习惯面向对象编程)
+3. Separate Domain from Presentation(将模型跟显示分离)
+4. Extract Hierarchy(当一个类功能太多混乱不堪时，那么把它分开)
 
 #### 重构原则
 
